@@ -1,7 +1,5 @@
-# Capital Fence hero concept
+# Capital Fence reusable website
 
-Hero only: responsive headline, scroll-driven SVG fence assembly, free-estimate preview dialog, and telephone links. No backend, generation API, or build dependencies. Serve `dist` with any static host. Google Fonts are optional; system fonts provide the fallback.
+Static site in `dist`. Start locally with `python -m http.server 4173 --directory dist` from this directory. Open http://localhost:4173.
 
-Business name, phone, service area and free-local-estimate copy were checked against https://www.capitalfencear.com/ on October 12, 2026. Artwork is an original illustrative concept, not a Capital Fence project photo. No reviews or credentials are asserted.
-
-For a recording, show the page at desktop width and at 390 px mobile width, click Play animation, then open the estimate preview. Each animation takes five seconds. The form entry point explicitly states that no request is sent.
+Includes a responsive hero with real logo, brief-supplied trust row, lightweight fence assembly with depth/shadows, material comparisons, official-website photos, quote builder, WhatsApp/email drafts, and sticky Call bar. Business-specific content is in `dist/client.config.js`. See RESKIN.md for the one-page client-swap guide and verification notes.
