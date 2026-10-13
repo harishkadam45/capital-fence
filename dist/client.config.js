@@ -1,6 +1,6 @@
 window.CLIENT = {
   name: 'Capital Fence', logo: 'assets/logo-eagle-flag.png', logoAlt: 'Capital Fence eagle and American flag logo',
-  heroPhoto: {src:'assets/hero-home-user.png', alt:'Yellow home with a porch, flowers and a white picket fence', credit:'REFERENCE HOME · INTERACTIVE DEPTH PREVIEW', source:''},
+  heroPhoto: {src:'assets/hero-home-unfenced.png', alt:'Yellow home with a porch, flowers and an open lawn; fence builds as you scroll', credit:'EDITED REFERENCE PHOTO · SCROLL TO BUILD', source:''},
   city: 'Cabot', state: 'Arkansas', county: 'Lonoke County',
   serviceAreas: ['Cabot', 'Austin', 'Ward', 'Lonoke', 'Beebe', 'Vilonia', 'Sherwood'],
   phone: '501-247-3918', phoneE164: '+15012473918', whatsapp: '15012473918',
