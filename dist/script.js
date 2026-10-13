@@ -49,3 +49,11 @@ function revealFence(){const hero=document.querySelector('.scroll-hero');const p
 let fenceTick=false;addEventListener('scroll',()=>{if(!fenceTick){requestAnimationFrame(()=>{revealFence();fenceTick=false;});fenceTick=true;}},{passive:true});addEventListener('resize',revealFence);revealFence();
 
 document.querySelectorAll('#model-fence .photo-picket').forEach((b,i)=>{b.style.left=(i*2.5)+'%';});document.querySelectorAll('#model-fence .photo-post').forEach((b,i)=>{b.style.left=i?'97.4%':'0';});document.querySelector('#scene-title').textContent='SCROLL TO BUILD YOUR FENCE';revealFence();
+
+const navToggle=document.querySelector('#nav-toggle'),siteNav=document.querySelector('#site-nav');
+function closeNav(){navToggle.setAttribute('aria-expanded','false');siteNav.classList.remove('is-open');}
+navToggle.addEventListener('click',()=>{const open=navToggle.getAttribute('aria-expanded')!=='true';navToggle.setAttribute('aria-expanded',String(open));siteNav.classList.toggle('is-open',open);});
+siteNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeNav));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&navToggle.getAttribute('aria-expanded')==='true'){closeNav();navToggle.focus();}});
+document.addEventListener('click',e=>{if(!siteNav.contains(e.target)&&!navToggle.contains(e.target))closeNav();});
+addEventListener('resize',()=>{if(innerWidth>900)closeNav();});
