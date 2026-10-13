@@ -1,5 +1,5 @@
 window.CLIENT = {
-  name: 'Capital Fence', logo: 'assets/logo-full.png', logoAlt: 'Capital Fence eagle and American flag logo',
+  name: 'Capital Fence', logo: 'assets/logo-eagle-flag.png', logoAlt: 'Capital Fence eagle and American flag logo',
   city: 'Cabot', state: 'Arkansas', county: 'Lonoke County',
   serviceAreas: ['Cabot', 'Austin', 'Ward', 'Lonoke', 'Beebe', 'Vilonia', 'Sherwood'],
   phone: '501-247-3918', phoneE164: '+15012473918', whatsapp: '15012473918',
@@ -33,3 +33,4 @@ window.CLIENT = {
   quote: {defaultMaterial:'wood', defaultHeight:'6', defaultFootage:150, heights:[{value:'4',label:'4 feet',factor:0.85},{value:'6',label:'6 feet',factor:1},{value:'8',label:'8 feet',factor:1.25}], gates:[{value:'0',label:'No gates',count:0,low:0,high:0},{value:'1',label:'1 walk gate',count:1,low:250,high:600},{value:'2',label:'2 walk gates',count:2,low:500,high:1200},{value:'drive',label:'1 double / drive gate',count:1,low:700,high:1600}]},
   verification: {ratings:'5.0 and 87 reviews supplied in client brief; verify before public launch',email:'Found in official website JSON-LD, October 13, 2026; confirm delivery',whatsapp:'Uses listed business phone; account availability unconfirmed',photos:'Official website assets; Google Business Profile provenance unconfirmed',prices:'Demo planning ranges; contractor approval needed'}
 };
+
