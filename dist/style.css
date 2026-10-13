@@ -23,3 +23,7 @@ header .brand img{width:175px;height:75px;object-fit:contain}header .brand>span{
 @media(max-width:600px){.cards{grid-template-columns:1fr}.material-card{display:block}.material-card>img,.material-card>.material-swatch{display:block;width:100%;height:220px;min-height:0;object-fit:cover}.material-card>div:not(.material-swatch){padding:24px 20px}}
 /* A short, subtle reveal without a pinned scroll spacer. */
 .scroll-hero{height:auto!important;min-height:0!important}.sticky{position:relative;min-height:0!important;padding-top:60px;padding-bottom:60px}.scene-wrap{top:50%;transform:translateY(-50%)}.copy{min-height:410px}.section#materials{padding-top:45px}@media(max-width:900px){.sticky{padding:30px 6% 20px}.copy{min-height:0}.scene-wrap{top:auto;transform:none;margin-top:22px}.section#materials{padding-top:35px}}
+
+/* Anchor destinations start flush at the viewport edge. */
+.section{scroll-margin-top:0}
+
