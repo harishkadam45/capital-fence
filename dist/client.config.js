@@ -1,5 +1,6 @@
 window.CLIENT = {
   name: 'Capital Fence', logo: 'assets/logo-eagle-flag.png', logoAlt: 'Capital Fence eagle and American flag logo',
+  heroPhoto: {src:'assets/house-photo.jpg', alt:'Real brick home with a green lawn, with a fence that assembles on scroll', credit:'HOUSE PHOTO · ROGER STARNES SR / UNSPLASH · CONCEPT', source:'https://unsplash.com/photos/a-brick-house-with-a-green-lawn-and-a-blue-sky-ph6qQVK00n0'},
   city: 'Cabot', state: 'Arkansas', county: 'Lonoke County',
   serviceAreas: ['Cabot', 'Austin', 'Ward', 'Lonoke', 'Beebe', 'Vilonia', 'Sherwood'],
   phone: '501-247-3918', phoneE164: '+15012473918', whatsapp: '15012473918',
