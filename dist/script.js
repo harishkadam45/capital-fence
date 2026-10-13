@@ -43,3 +43,9 @@ function setModel(active){modelActive=active;modelViewport.hidden=!active;viewBu
 viewButton.hidden=true;setModel(true);document.querySelector('#scene-title').textContent='SCROLL TO BUILD YOUR FENCE';modelViewport.removeAttribute('tabindex');modelViewport.setAttribute('aria-label','House photograph with a fence that builds gradually as you scroll');
 
 document.querySelector('#scene-title').textContent='YOUR BACKYARD, REIMAGINED';document.querySelector('#stage').textContent='A LITTLE MORE HOME';document.querySelector('#hero-photo-credit').textContent='EDITED REFERENCE PHOTO';
+
+// Fence reveal progresses left to center as the page scrolls.
+function revealFence(){const hero=document.querySelector('.scroll-hero');const progress=reduced?1:clamp(-hero.getBoundingClientRect().top/Math.max(1,hero.offsetHeight-innerHeight));const panel=document.querySelector('#model-fence');panel.querySelectorAll('.photo-picket').forEach((board,i)=>{const n=clamp((progress-.08-(i/40)*.58)/.22);board.style.opacity=n;board.style.transform=`translateY(${(1-n)*28}px)`;});panel.querySelectorAll('.photo-post').forEach((post,i)=>{const n=clamp((progress-.04-i*.18)/.2);post.style.opacity=n;post.style.transform=`translateY(${(1-n)*28}px)`;});panel.querySelectorAll('.photo-rail').forEach((rail,i)=>{const n=clamp((progress-.13-i*.04)/.62);rail.style.opacity=n;rail.style.transform=`scaleX(${n})`;rail.style.transformOrigin='left';});}
+let fenceTick=false;addEventListener('scroll',()=>{if(!fenceTick){requestAnimationFrame(()=>{revealFence();fenceTick=false;});fenceTick=true;}},{passive:true});addEventListener('resize',revealFence);revealFence();
+
+document.querySelectorAll('#model-fence .photo-picket').forEach((b,i)=>{b.style.left=(i*2.5)+'%';});document.querySelectorAll('#model-fence .photo-post').forEach((b,i)=>{b.style.left=i?'97.4%':'0';});document.querySelector('#scene-title').textContent='SCROLL TO BUILD YOUR FENCE';revealFence();
