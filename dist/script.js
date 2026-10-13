@@ -17,7 +17,7 @@ $('#logo').src=c.logo; $('#logo').alt=c.logoAlt; put('brand-name',c.name);
 put('location',`${c.copy.eyebrow} · ${c.city.toUpperCase()}, ${c.state.toUpperCase()}`);
 const h=$('#headline');h.append(document.createTextNode(c.copy.headline[0]),document.createElement('br'),document.createTextNode(c.copy.headline[1]));const em=document.createElement('em');em.textContent=c.copy.headline[2];h.append(em);
 put('intro',c.copy.intro);put('hero-cta',c.copy.cta);put('local-note',c.copy.localNote);
-const review=document.createElement('a'); review.href=c.reviewsUrl;review.target='_blank';review.rel='noopener';review.textContent=`★★★★★ ${c.rating} · ${c.reviews} Google reviews`;$('#trust').append(review);if(c.ownerOperated){const span=document.createElement('span');span.textContent='✓ Owner-operated';$('#trust').append(span);}
+const review=document.createElement('a'); review.href=c.reviewsUrl;review.target='_blank';review.rel='noopener';review.setAttribute('aria-label', `${c.rating} out of 5 stars, ${c.reviews} Google reviews`);const stars=document.createElement('span');stars.className='rating-stars';stars.setAttribute('aria-hidden','true');stars.textContent='★★★★★';review.append(stars,document.createTextNode(` ${c.rating} · ${c.reviews} Google reviews`));$('#trust').append(review);if(c.ownerOperated){const span=document.createElement('span');span.textContent='✓ Owner-operated';$('#trust').append(span);}
 for(const id of ['materials','work','services','quote']){put(id+'-title',c.copy[id+'Title']);put(id+'-intro',c.copy[id+'Intro']);}
 put('price-note',c.copy.priceNote);put('area-list','Serving '+c.serviceAreas.join(', ')+', and nearby communities.');
 put('footer-name',c.name);put('footer-location',`${c.city}, ${c.state} · ${c.county}`);
